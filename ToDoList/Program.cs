@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using ToDoList.DAL;
+using ToDoList.DAL.Interfaces;
+using ToDoList.DAL.Repositories;
+using ToDoList.Domain.Entity;
+using ToDoList.Service.implementations;
+using ToDoList.Service.interfaces;
 
 namespace ToDoList
 {
@@ -11,6 +16,10 @@ namespace ToDoList
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<IBaseRepostiory<TaskEntity>, TaskRepository>();
+
+            builder.Services.AddScoped<ITaskService, TaskService>();
 
 
 

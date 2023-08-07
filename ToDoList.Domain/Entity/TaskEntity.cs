@@ -12,8 +12,11 @@ namespace ToDoList.Domain.Entity
         public long Id { get; set; }
 
         public string Name { get; set; }
+        public bool isDone { get; set; }
 
         public string Description   { get; set; }
+        
+        public DateTime Created { get; set; }
 
         public Priority Priority { get; set; }
     }
