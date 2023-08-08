@@ -12,5 +12,6 @@ namespace ToDoList.Service.interfaces
     public interface ITaskService
     {
         Task<IBaseResponse<TaskEntity>> Create(CreateTaskViewModel model);
+        Task<IBaseResponse<IEnumerable<TaskViewModel>>> GetTasks();
     }
 }

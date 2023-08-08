@@ -30,6 +30,11 @@ namespace ToDoList.Controllers
             return BadRequest(new { description = response.Description });
         }
 
+        [HttpPost]
+        public async Task<IActionResult> TaskHandler()
+        {
+            return Json(new { });
+        }
 
     }
 }
